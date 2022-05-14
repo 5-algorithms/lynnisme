@@ -12,8 +12,3 @@ def solution1(arr1, arr2):
     # zip(*arr) = arr의 열을 행으로, 바꿈
     return [[sum(a1*a2 for a1,a2 in zip(arr1_row, arr2_col)) for arr2_col in zip(*arr2)] for arr1_row in arr1]
 
-
-import collections
-def solution(participant, completion):
-    answer = collections.Counter(participant) - collections.Counter(completion) 
-    return list(answer.keys())[0]
